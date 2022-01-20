@@ -1,0 +1,9 @@
+
+.cards {
+    display: inline-block;
+    padding: 1rem 1rem;
+    align-items: center;
+    margin-left: 170px;
+    margin-right: 170px;
+    margin-top: 200px;
+  }

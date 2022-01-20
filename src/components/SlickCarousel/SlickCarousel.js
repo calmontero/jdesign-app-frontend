@@ -3,6 +3,8 @@ import './SlickCarousel.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 function SlickCarousel() {
     const [nav1, setNav1] = useState(null);
@@ -27,7 +29,7 @@ function SlickCarousel() {
     };
   
     const settingsThumbs = {
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
       asNavFor: '.slider-for',
       dots: true,
@@ -66,46 +68,45 @@ function SlickCarousel() {
     ];
 
     return (
-<div className="App">
-<div className="slider-wrapper">
+      <div className="carousel">
+        <a className="close" href="/" >
+          <IconButton aria-label="close">
+            <CloseIcon />
+          </IconButton>
+        </a>
 
-        <Slider
-          {...settingsMain}
-          asNavFor={nav2}
-          ref={slider => (setSlider1(slider))}
-        >
-
-          {slidesData.map((slide) =>
-
-            <div className="slick-slide" key={slide.id}>
- 
-              <div class="center-image">
-                <img  src={`https://picsum.photos/800/400?img=${slide.id}`} />
-              </div>
-
-            </div>
-
-          )}
-
-        </Slider>
-        <div className="thumbnail-slider-wrap">
+        <div className="slider-wrapper">
           <Slider
-            {...settingsThumbs}
-            asNavFor={nav1}
-            ref={slider => (setSlider2(slider))}>
-
+            {...settingsMain}
+            asNavFor={nav2}
+            ref={slider => (setSlider1(slider))}
+          >
             {slidesData.map((slide) =>
-
               <div className="slick-slide" key={slide.id}>
-                <img className="slick-slide-image" src={`https://picsum.photos/800/400?img=${slide.id}`} />
+                <div class="center-image">
+                  <img  src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />
+                </div>
               </div>
-
             )}
 
           </Slider>
+          
+          <div className="thumbnail-slider-wrap">
+            <Slider
+              {...settingsThumbs}
+              asNavFor={nav1}
+              ref={slider => (setSlider2(slider))}>
+
+              {slidesData.map((slide) =>
+                <div className="slick-slide" key={slide.id}>
+                  <img className="slick-slide-image" src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />
+                </div>
+              )}
+
+            </Slider>
+          </div>
         </div>
       </div>
-    </div>
     );
 }
 

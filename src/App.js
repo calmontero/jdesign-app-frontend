@@ -1,14 +1,19 @@
-import './App.css';
-import CardJobs from './components/CardJobs/CardJobs';
-//import SlickCarousel from './components/SlickCarousel/SlickCarousel';
-//import BootCarousel from './components/BootCarousel/BootCarousel';
+//import './App.css';
+import CraftJobs from './components/CraftJobs/CraftJobs';
+import { Switch, Route } from "react-router-dom";
 //import Home from './components/Home/Home';
+import SlickCarousel from './components/SlickCarousel/SlickCarousel';
 
 function App() {
   return (
-    <div className="App">
-      <CardJobs />
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <CraftJobs />
+      </Route>
+      <Route exact path="/services">
+        <SlickCarousel />
+      </Route>
+    </Switch>
   );
 }
 
