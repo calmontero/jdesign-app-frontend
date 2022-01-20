@@ -1,0 +1,24 @@
+.craft-container {
+    background: url("https://i.ibb.co/47gH6Cj/bg-presentation.jpg");
+    height: 75vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.box {
+    width: 97%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    border-radius: 12px;
+}
+
+.overlay {
+    z-index: 9;
+    margin: 400px 6px 100px 15px;
+    background: whitesmoke;
+}
