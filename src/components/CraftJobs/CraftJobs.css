@@ -7,13 +7,13 @@
 
 .boxes {
   margin: 10px;
-  margin-top: 100px;
+  margin-top: 50px;
     
   }
   
-  .grids {
-    display: inline-block;
-    border: 1px solid red;
-    padding: 1rem 1rem;
-    vertical-align: middle;
-  }
+.grids {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}

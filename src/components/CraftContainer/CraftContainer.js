@@ -2,10 +2,11 @@ import React from "react";
 import "./CraftContainer.css";
 import Typography from '@mui/material/Typography';
 import { makeStyles } from "@material-ui/core/styles";
+import CraftJobs from '../CraftJobs/CraftJobs';
 
 const useStyles = makeStyles({
     custom: {
-      color: "#00EE00",
+      color: "pink",
       fontWeight: "bold"
     }
   });
@@ -15,10 +16,11 @@ function CraftContainer() {
     return (
         <div className="craft-container">
             <Typography gutterBottom variant="h1" component="div" align='center' className={classes.custom} >
-                JDesigns Arts
+                JDesign Arts
             </Typography>
-            <div class="box overlay">
 
+            <div class="box overlay">
+                <CraftJobs />
             </div>
         </div>
     )

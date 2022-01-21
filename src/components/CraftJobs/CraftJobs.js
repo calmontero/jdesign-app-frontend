@@ -1,14 +1,24 @@
 import React, { useEffect } from 'react';
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Typography from '@mui/material/Typography';
 import Cards from '../Cards/Cards';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  custom: {
+    color: "pink",
+    fontWeight: "bold"
+  }
+});
 
 function CraftJobs() {
+  const classes = useStyles();
+  /*
     useEffect(() => {
         Aos.init({ duration: 2000 });
       }, []);
-
+*/
       const cardInfo = [
         {
           image: "https://i.ibb.co/qmTrQ2m/Sample-01.png",
@@ -34,10 +44,10 @@ function CraftJobs() {
     
     return (
     <div className="cards-list">
+      <Typography gutterBottom variant="h2" component="div" align='center' className={classes.custom} >
+          Jobs
+      </Typography>
       <div className="grids">
-        <Typography gutterBottom variant="h1" component="div">
-                JDesigns_arts
-        </Typography>
             { cardInfo.map(renderCard => {
                 return <Cards renderCard={renderCard} />
                 }
