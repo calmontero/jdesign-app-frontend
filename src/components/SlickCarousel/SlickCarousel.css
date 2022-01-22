@@ -1,15 +1,15 @@
 .thumbnail-slider-wrap {
     margin-top: 15px;
-    height: 85px;
+    height: 50px;
   }
   .thumbnail-slider-wrap .slick-track .slick-slide {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   .thumbnail-slider-wrap .slick-track .slick-slide img {
     width: 70%;
-    margin: 0 5px;
+    margin: 0 4px;
     
   }
 
@@ -17,10 +17,6 @@
     display:flex;
     justify-content:center; /* horizontally center */
     align-items:center;    /* vertically center */
-
-    vertical-align: middle;
-  width: 100%;
-  height: 100%;
   }
  
 

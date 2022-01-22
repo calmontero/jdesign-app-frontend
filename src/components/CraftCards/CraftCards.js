@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card } from "react-bootstrap";
-import "./Cards.css";
+import "./CraftCards.css";
 import { Link } from 'react-router-dom';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Cards( { renderCard } ) {
     const { title, image, effect } = renderCard;
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+      }, []);
 
     return (
         <div className="cards">

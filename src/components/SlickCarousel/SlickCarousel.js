@@ -43,27 +43,33 @@ function SlickCarousel() {
       {
         id: 1,
         title: 'Image 1',
-        label: 'Dolorem officiis temporibus.'
+        label: 'Dolorem officiis temporibus.',
+        imgLink: "https://i.ibb.co/K5cbRvz/pagina-4-nuevo.jpg"
       }, {
         id: 2,
         title: 'Image 2',
-        label: 'Officia non provident dolor esse et neque.'
+        label: 'Officia non provident dolor esse et neque.',
+        imgLink: "https://i.ibb.co/G2pBNCr/pagina-2-nueva.jpg"
       }, {
         id: 3,
         title: 'Image 3',
-        label: 'Ut recusandae vel vitae molestiae id soluta.'
+        label: 'Ut recusandae vel vitae molestiae id soluta.',
+        imgLink: "https://i.ibb.co/KVZwhgg/TAZA-ZULE-1.jpg"
       }, {
         id: 4,
         title: 'Image 4',
-        label: 'Qui vel consequatur recusandae illo repellendus.'
+        label: 'Qui vel consequatur recusandae illo repellendus.',
+        imgLink: "https://i.ibb.co/Y0n8xKk/TAZA-KATERIN-NUEVO-2.jpg"
       }, {
         id: 5,
         title: 'Image 5',
-        label: 'Placeat odit velit itaque voluptatem.'
+        label: 'Placeat odit velit itaque voluptatem.',
+        imgLink: "https://i.ibb.co/47WCLh8/globos-valeria.jpg"
       }, {
         id: 6,
         title: 'Image 6',
-        label: 'Adipisci officiis repudiandae.'
+        label: 'Adipisci officiis repudiandae.',
+        imgLink: "https://i.ibb.co/QfcBcVj/franela-karely1.jpg"
       },
     ];
 
@@ -84,7 +90,9 @@ function SlickCarousel() {
             {slidesData.map((slide) =>
               <div className="slick-slide" key={slide.id}>
                 <div class="center-image">
-                  <img  src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />
+                  {/*<img  src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />*/}
+                  <img  src={slide.imgLink} alt={slide.title} width="300" 
+     height="380" object-fit= "cover" />
                 </div>
               </div>
             )}
@@ -99,7 +107,9 @@ function SlickCarousel() {
 
               {slidesData.map((slide) =>
                 <div className="slick-slide" key={slide.id}>
-                  <img className="slick-slide-image" src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />
+                  {/*<img className="slick-slide-image" src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />*/}
+                  <img  src={slide.imgLink} alt={slide.title} width="100" 
+     height="200" object-fit= "cover" />
                 </div>
               )}
 

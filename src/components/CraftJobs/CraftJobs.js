@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import Aos from "aos";
+import React from 'react';
+//import Aos from "aos";
 import "aos/dist/aos.css";
-import Cards from '../Cards/Cards';
+import CraftCards from '../CraftCards/CraftCards';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -26,17 +26,17 @@ function CraftJobs() {
           effect: "fade-right",
         },
         {
-          image: "https://i.ibb.co/qmTrQ2m/Sample-01.png",
+          image: "https://i.ibb.co/1bbBJ8Y/Sample-02.png",
           title: "Clothes",
           effect: "fade-left",
         },
         {
-          image: "https://i.ibb.co/qmTrQ2m/Sample-01.png",
+          image: "https://i.ibb.co/551ksvr/Sample-04.png",
           title: "Ornaments",
           effect: "fade-up-right",
         },
         {
-          image: "https://i.ibb.co/qmTrQ2m/Sample-01.png",
+          image: "https://i.ibb.co/TqRNTT4/Sample-03.png",
           title: "Glass",
           effect: "fade-up-left",
         },
@@ -49,7 +49,7 @@ function CraftJobs() {
       </Typography>
       <div className="grids">
             { cardInfo.map(renderCard => {
-                return <Cards renderCard={renderCard} />
+                return <CraftCards renderCard={renderCard} />
                 }
             )}
         </div>
