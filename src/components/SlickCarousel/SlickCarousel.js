@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import './SlickCarousel.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -11,6 +12,7 @@ function SlickCarousel() {
     const [nav2, setNav2] = useState(null);
     const [slider1, setSlider1] = useState(null);
     const [slider2, setSlider2] = useState(null);
+    const history = useHistory();
   
     useEffect(() => {
   
@@ -19,6 +21,9 @@ function SlickCarousel() {
   
     });
   
+    function handleClick() {
+      history.goBack();
+    }
   
     const settingsMain = {
       slidesToShow: 1,
@@ -74,13 +79,11 @@ function SlickCarousel() {
     ];
 
     return (
-      <div className="carousel">
-        <a className="close" href="/" >
+      <div className="carousel">        
           <IconButton aria-label="close">
-            <CloseIcon />
+            <CloseIcon onClick={handleClick} />
           </IconButton>
-        </a>
-
+        
         <div className="slider-wrapper">
           <Slider
             {...settingsMain}
@@ -91,8 +94,7 @@ function SlickCarousel() {
               <div className="slick-slide" key={slide.id}>
                 <div class="center-image">
                   {/*<img  src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />*/}
-                  <img  src={slide.imgLink} alt={slide.title} width="300" 
-     height="380" object-fit= "cover" />
+                  <img  src={slide.imgLink} alt={slide.title} width="300" height="380" object-fit= "cover" />
                 </div>
               </div>
             )}
@@ -108,8 +110,7 @@ function SlickCarousel() {
               {slidesData.map((slide) =>
                 <div className="slick-slide" key={slide.id}>
                   {/*<img className="slick-slide-image" src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />*/}
-                  <img  src={slide.imgLink} alt={slide.title} width="100" 
-     height="200" object-fit= "cover" />
+                  <img  src={slide.imgLink} alt={slide.title} width="100" height="200" object-fit= "cover" />
                 </div>
               )}
 
