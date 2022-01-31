@@ -94,7 +94,7 @@ function SlickCarousel() {
               <div className="slick-slide" key={slide.id}>
                 <div class="center-image">
                   {/*<img  src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />*/}
-                  <img  src={slide.imgLink} alt={slide.title} width="300" height="380" object-fit= "cover" />
+                  <img  src={slide.imgLink} alt={slide.title} width="400" height="380" object-fit= "cover" />
                 </div>
               </div>
             )}
@@ -110,7 +110,7 @@ function SlickCarousel() {
               {slidesData.map((slide) =>
                 <div className="slick-slide" key={slide.id}>
                   {/*<img className="slick-slide-image" src={`https://picsum.photos/800/400?img=${slide.id}`} alt={slide.title} />*/}
-                  <img  src={slide.imgLink} alt={slide.title} width="100" height="200" object-fit= "cover" />
+                  <img  src={slide.imgLink} alt={slide.title} width="150" height="200" object-fit= "cover" />
                 </div>
               )}
 
