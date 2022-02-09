@@ -6,7 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 function Cards( { renderCard } ) {
-    const { title, image, effect } = renderCard;
+    const { id, title, image, effect } = renderCard;
 
     useEffect(() => {
         Aos.init({ duration: 2000 });
@@ -20,7 +20,7 @@ function Cards( { renderCard } ) {
               <Card.Body>
                 <Card.Title>
                 { /* {showForm ? <SlickCarousel /> : null} */}
-                  <Link to={"/services"}>{title}</Link>
+                  <Link to={`/services/${id}`}>{title}</Link>
                 </Card.Title>
               </Card.Body>
             </Card>

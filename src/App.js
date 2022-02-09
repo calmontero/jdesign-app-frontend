@@ -8,7 +8,7 @@ function App() {
       <Route exact path="/">
         <CraftContainer />
       </Route>
-      <Route exact path="/services">
+      <Route exact path="/services/:id">
         <SlickCarousel />
       </Route>
     </Switch>
