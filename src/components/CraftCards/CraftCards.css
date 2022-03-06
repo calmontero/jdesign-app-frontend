@@ -1,6 +1,7 @@
 
 .cards {
-    display: inline-block;
+    border: 1px solid red;
+    border-radius: 0px;
     padding: 1rem 1rem;
     align-items: center;
     margin-left: 150px;
@@ -10,6 +11,6 @@
 
 .boxes {
   margin: 10px;
-  margin-top: 50px;
+  margin-top: 5px;
     
   }

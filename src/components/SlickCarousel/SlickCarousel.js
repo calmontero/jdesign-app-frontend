@@ -48,7 +48,7 @@ function SlickCarousel() {
 
     //Recover the data
     useEffect(() => (
-      fetch(`http://localhost:4000/data/${id}`)
+      fetch(`https://pure-thicket-24038.herokuapp.com/data/${id}`)
         .then((response) => response.json())
         .then(data => setSlides(data.image))
     ),[]);

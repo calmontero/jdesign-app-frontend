@@ -64,7 +64,7 @@ const Card = ({ img }) => {
         }}
       />
       <p>
-        Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
+        Phasellus2 vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
         Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
         tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
         fringilla massa. Etiam hendrerit dolor eget rutrum

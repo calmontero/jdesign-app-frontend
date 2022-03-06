@@ -30,13 +30,13 @@ function CraftJobs() {
       id: 3,
       image: "https://i.ibb.co/551ksvr/Sample-04.png",
       title: "Ornaments",
-      effect: "fade-up-right",
+      effect: "fade-right",
     },
     {
       id: 4,
       image: "https://i.ibb.co/TqRNTT4/Sample-03.png",
       title: "Glass",
-      effect: "fade-up-left",
+      effect: "fade-left",
     },
   ];
     
