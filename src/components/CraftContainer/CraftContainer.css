@@ -5,11 +5,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     flex: 1;
+
 }
 
 .box {
     width: 97%;
-    height: 1000px;
+    height: 310vh;
     position: absolute;
     top: 0;
     left: 0;
