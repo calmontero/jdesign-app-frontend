@@ -32,16 +32,29 @@ const Testimonial = () => {
       <div style={{ width: "50%", textAlign: "center" }}>
         <h1 style={{ marginBottom: 20 }}>TESTIMONIALS</h1>
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
-          <Card img="https://www.tutorialrepublic.com/examples/images/clients/1.jpg" />
-          <Card img="https://www.tutorialrepublic.com/examples/images/clients/2.jpg" />
-          <Card img="https://www.tutorialrepublic.com/examples/images/clients/3.jpg" />
+          <Card img="https://i.ibb.co/vjzz5q8/instagram-profile-calmontero.jpg" p="Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
+        Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
+        tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
+        fringilla massa. Etiam hendrerit dolor eget rutrum" title="@calmontero" link='http://instagram.com/_u/calmontero' />
+          <Card img="https://i.ibb.co/qRKMR2p/instagram-profile-valear-cl.jpg" p="Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
+        Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
+        tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
+        fringilla massa. Etiam hendrerit dolor eget rutrum" title="@valear.cl" link='http://instagram.com/_u/valear.cl' />
+          <Card img="https://i.ibb.co/9NXQDPV/instagram-profile-kraftingmoments.jpg" p="Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
+        Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
+        tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
+        fringilla massa. Etiam hendrerit dolor eget rutrum" title="@kraftingmoments" link='http://instagram.com/_u/kraftingmoments' />
+          <Card img="https://i.ibb.co/0Q7sTGr/instagram-profile-agape-designs.jpg" p="Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
+        Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
+        tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
+        fringilla massa. Etiam hendrerit dolor eget rutrum" title="@agape_designs_" link='http://instagram.com/_u/agape_designs_' />
         </Slider>
       </div>
     </div>
   );
 };
 
-const Card = ({ img }) => {
+const Card = ({ img, p, title, link }) => {
   return (
     <div
       style={{
@@ -64,14 +77,10 @@ const Card = ({ img }) => {
         }}
       />
       <p>
-        Phasellus2 vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
-        Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
-        tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
-        fringilla massa. Etiam hendrerit dolor eget rutrum
+        {p}
       </p>
       <p style={{ fontStyle: "italic", marginTop: 25 }}>
-        <span style={{ fontWeight: 500, color: "green" }}>PAULA WILSON</span> ,
-        Media Analyst
+        <a style={{ fontWeight: 500, color: "green" }} href={link} target="_blank">{title}</a>
       </p>
     </div>
   );

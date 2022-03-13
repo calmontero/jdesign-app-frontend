@@ -16,7 +16,7 @@ function Cards( { renderCard } ) {
         <div data-aos={effect} className="boxes">
           <Container fluid>
             <CardGroup className="m-5 d-block">
-              <Card className="m-3 border-1 shadow" style={{ height: '300px', maxwidth: "100%", backgroundColor: '#B7E0F2', borderRadius: 55, padding: '3rem' }}>
+              <Card className="m-3 border-1 shadow" style={{ height: '300px', maxwidth: "100%", backgroundColor: 'seashell', borderRadius: 55, padding: '3rem' }}>
                 <Row>
                 <Col>
                   <Card.Img variant="top" src={image} style={{objectFit: 'contain', borderRadius: 55, height: '200px'}} />
