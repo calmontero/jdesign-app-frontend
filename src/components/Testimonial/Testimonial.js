@@ -6,7 +6,6 @@ import { Avatar } from "@material-ui/core";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 const PreviousBtn = (props) => {
-  console.log(props);
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
@@ -30,7 +29,7 @@ const Testimonial = () => {
       style={{ display: "flex", justifyContent: "center", marginTop: 50 }}
     >
       <div style={{ width: "50%", textAlign: "center" }}>
-        <h1 style={{ marginBottom: 20 }}>TESTIMONIALS</h1>
+        
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
           <Card img="https://i.ibb.co/vjzz5q8/instagram-profile-calmontero.jpg" p="Un cliente satisfecho es un cliente fiuel, un cliente que se vuelve parte de la familia del negocio, un cliente valioso.  Por eso priorizamos su satisfacción y la procuramos con gran esfuerzo."
            title="@calmontero" link='http://instagram.com/_u/calmontero' />
@@ -72,7 +71,7 @@ const Card = ({ img, p, title, link }) => {
         {p}
       </p>
       <p style={{ fontStyle: "italic", marginTop: 25 }}>
-        <a style={{ fontWeight: 500, color: "green" }} href={link} target="_blank">{title}</a>
+        <a style={{ fontWeight: 500, color: "green" }} href={link} target="_blank" rel="noopener noreferrer" >{title}</a>
       </p>
     </div>
   );

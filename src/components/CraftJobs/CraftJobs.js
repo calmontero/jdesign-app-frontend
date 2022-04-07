@@ -1,18 +1,8 @@
 import React from 'react';
-import "aos/dist/aos.css";
 import CraftCards from '../CraftCards/CraftCards';
-import Typography from '@mui/material/Typography';
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles({
-  custom: {
-    color: "red",
-    fontWeight: "bold"
-  }
-});
+import "../../styles.scss";
 
 function CraftJobs() {
-  const classes = useStyles();
   const cardInfo = [
     {
       id: 1,
@@ -42,15 +32,10 @@ function CraftJobs() {
     
     return (
     <div className="cards-list">
-      <Typography gutterBottom variant="h2" component="div" align='center' className={classes.custom} >
-          Jobs
-      </Typography>
-      <div className="grids">
-            { cardInfo.map(renderCard => {
-                return <CraftCards renderCard={renderCard} />
-                }
-            )}
-        </div>
+          { cardInfo.map(renderCard => {
+              return <CraftCards renderCard={renderCard} />
+              }
+          )}
       </div>
     )
 }
