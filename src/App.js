@@ -7,8 +7,10 @@ import Home from "./components/Home/Home";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Typography from '@mui/material/Typography';
 import { makeStyles } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "./styles.scss";
 import CraftDownloads from "./components/CraftDownloads/CraftDownloads";
+//import { isMobile, browserName } from "react-device-detect";
 
 const useStyles = makeStyles({
   custom: {
@@ -17,56 +19,29 @@ const useStyles = makeStyles({
   }
 });
 
-//import { isMobile, browserName } from "react-device-detect";
-//import SlickCarousel from './components/SlickCarousel/SlickCarousel';
-/*
-const viewportContext = React.createContext({});
+const theme = createTheme();
 
-const ViewportProvider = ({ children }) => {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [height, setHeight] = React.useState(window.innerHeight);
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
-
-  return (
-    <viewportContext.Provider value={{ width, height }}>
-      {children}
-    </viewportContext.Provider>
-  );
+theme.typography.h1 = {
+  '@media (max-width: 549px)': {
+    fontSize: '2.5rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '5.1rem',
+  },
 };
-
-const useViewport = () => {
-  const { width, height } = React.useContext(viewportContext);
-  return { width, height };
-};
-
-const MobileComponent = () => <p>"Hmmm... Why is your screen so small?"</p>;
-const DesktopComponent = () => <p>"Wow, your screen is big!"</p>;
-
-const MyComponent = () => {
-  const { width } = useViewport();
-  const breakpoint = 620;
-
-  return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
-};
-*/
 
 function App() {
   const classes = useStyles();
+  //alert(isMobile);
 
   return (
     <div className="main-container" >
       <div className="craft-container" >
+      <ThemeProvider theme={theme}>
         <Typography gutterBottom variant="h1" component="div" align='center' className={classes.custom} >
             Judith's Designs
         </Typography>
+        </ThemeProvider>
         <span  className="font-link"  >
           Crafts creation on paper, glass, clothes, and more...
         </span>

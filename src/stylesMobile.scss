@@ -1,9 +1,8 @@
-@media only screen and (min-width: 1024px)  {
-  .main-container {
+.main-container {
     background-color: pink;
     height: 135vh;
   }
-
+  
   .craft-container {
     background: url("https://i.ibb.co/Kb7jHFV/background-main.jpg") ;
     height: 135vh;
@@ -12,7 +11,23 @@
     flex: 1;
     margin: 0 auto;
   }
-
+  
+  @media only screen and (min-width: 1024px)  {
+    .main-container {
+      background-color: pink;
+      height: 135vh;
+    }
+  
+    .craft-container {
+      background: url("https://i.ibb.co/Kb7jHFV/background-main.jpg") ;
+      height: 135vh;
+      width: 170vh;
+      background-size: cover;
+      flex: 1;
+      margin: 0 auto;
+    }
+  }
+  
   .font-link {
     font-family: 'Bebas Neue', cursive;
     padding: 0 10px;
@@ -102,64 +117,4 @@
     background-color: #333;
   }
   
-}
-
-@media only screen and (max-width: 549px)  {
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 350px;
-    left: 0px;
-    
-  }
-
-  .craft-container {
-    background: url("https://i.ibb.co/Kb7jHFV/background-main.jpg") ;    
-    background-size: cover;
-    height: 700px;
-    
-  }
-
-  .font-link {
-    font-family: 'Bebas Neue', cursive;
-    padding: 0 10px;
-    white-space: normal;
-    word-break: break-word;
-    display: block;
-    align-items: center;
-    text-align: center;
-    color: white;
-    font-size: 100%;
-    width: 390px;
-    margin: auto;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
-
-  .color-navbar {
-    background-color: palevioletred;
-    width: 365px;
-  }
   
-  .center-navbar {
-    margin-left: 5%;
-  }
-
-  .box {
-    width: 10px;
-    height: 100px;
-    position: absolute;
-    top: 150px;
-
-    opacity: 2;
-    border-radius: 12px;
-  }
-
-  .overlay {
-    width: 330px;
-    height: 500px;
-    margin: -5px;
-    background: whitesmoke;
-    left: 10px;
-  }
-}
