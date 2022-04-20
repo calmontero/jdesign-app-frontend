@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons';
 
 function Home() {
     return (
-        <div className="home-container">
+      <div className="home-container">
         <SocialIcon url="https://www.instagram.com/jdesign_art/" target="_blank" network="instagram" style={{ height: 35, width: 35 }} />
         <SocialIcon url="https://www.facebook.com" target="_blank" network="facebook" style={{ height: 35, width: 35 }} />
         <SocialIcon url="https://jdesigns-beta.netlify.app/" target="_blank" label="Share" style={{ height: 35, width: 35 }}/>

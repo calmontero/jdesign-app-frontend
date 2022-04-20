@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import CraftJobs from "./components/CraftJobs/CraftJobs";
@@ -33,10 +33,23 @@ theme.typography.h1 = {
 function App() {
   const classes = useStyles();
   //alert(isMobile);
+  const [width, setWindowWidth] = useState(0);
+
+  // componentDidMount...runs only once
+  useEffect( () => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, [])
+
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
+  };
 
   return (
     <div className="main-container" >
-      <div className="craft-container" >
+      <div className="craft-header" >
       <ThemeProvider theme={theme}>
         <Typography gutterBottom variant="h1" component="div" align='center' className={classes.custom} >
             Judith's Designs
@@ -46,7 +59,7 @@ function App() {
           Crafts creation on paper, glass, clothes, and more...
         </span>
         <Navigation />
-          <div className="box overlay" >
+          <div className="craft-box" >
           <Switch>
             <Route exact path="/" >
               <Home />
