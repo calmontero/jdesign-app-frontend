@@ -8,10 +8,10 @@ function Navigation() {
     return (
         <Navbar className="color-navbar" variant="light" >
             <Nav className="center-navbar" activeKey={location.pathname} >
-            <Nav.Link href="/" activeClassName="active" className="linkText">HOME</Nav.Link>
-            <Nav.Link href="/jobs" activeClassName="active" className="linkText">JOBS</Nav.Link>
-            <Nav.Link href="/testimonials" activeClassName="active" className="linkText">TESTIMONIALS</Nav.Link>
-            <Nav.Link href="/downloads" activeClassName="active" className="linkText">DESCARGAS</Nav.Link>
+            <Nav.Link href="/" activeClassName="active" >HOME</Nav.Link>
+            <Nav.Link href="/jobs" activeClassName="active" >JOBS</Nav.Link>
+            <Nav.Link href="/testimonials" activeClassName="active" >TESTIMONIALS</Nav.Link>
+            <Nav.Link href="/downloads" activeClassName="active" >DESCARGAS</Nav.Link>
             </Nav>
         </Navbar>
     );

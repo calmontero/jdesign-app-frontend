@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import CraftJobs from "./components/CraftJobs/CraftJobs";
 import CraftSwiper from "./components/CraftSwiper/CraftSwiper";
-import Home from "./components/Home/Home";
+import Home from "./components/Home/Home"; 
 import Testimonial from "./components/Testimonial/Testimonial";
 import Typography from '@mui/material/Typography';
 import { makeStyles } from "@material-ui/core/styles";
@@ -31,21 +31,8 @@ theme.typography.h1 = {
 };
 
 function App() {
-  const classes = useStyles();
+  const classes = useStyles(); 
   //alert(isMobile);
-  const [width, setWindowWidth] = useState(0);
-
-  // componentDidMount...runs only once
-  useEffect( () => {
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, [])
-
-  const updateDimensions = () => {
-    const width = window.innerWidth;
-    setWindowWidth(width);
-  };
 
   return (
     <div className="main-container" >
@@ -56,10 +43,10 @@ function App() {
         </Typography>
         </ThemeProvider>
         <span  className="font-link"  >
-          Crafts creation on paper, glass, clothes, and more...
+          Papelería creativa para tus eventos, artículos personalizados franelas, tazas, vasos y mucho más...
         </span>
         <Navigation />
-          <div className="craft-box" >
+          <div id="box" className="craft-box" >
           <Switch>
             <Route exact path="/" >
               <Home />

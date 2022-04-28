@@ -7,6 +7,7 @@
   bottom:0px;
   left:0px;
   margin: 0;
+  height: fit-content;
 }
 
 .craft-header {
@@ -16,41 +17,76 @@
   margin: 0 auto;
 }
 
-.font-link {
-  font-family: 'Bebas Neue', cursive;
-  padding: 0 10px;
-  white-space: normal;
-  word-break: break-word;
-  display: block;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-size: 200%;
-  margin: auto;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
 .craft-box {
-  background: whitesmoke;
+  background: #fefbd8;
   opacity: 2;
   border-radius: 12px;
+  height: fit-content;
+}
+
+.home-container {
   height: 63vh;
 }
 
 .color-navbar {
   background-color: palevioletred;
 }
+
 //Desktop or Laptop
 @media only screen and (min-width: 1224px)  {
   .center-navbar {
     margin-left: 35%;
   }
+
+  .profile-container {
+    display: flex;
+    align-items: center;
+    
+    img {
+      width: 250px;
+      height: 250px;
+      resize: 'contain';
+      border-radius: 12px;
+      margin-left: 20px;
+      margin-right: 40px;
+    }
+
+    span {
+      text-align: center;
+    }
+  }
+
 }
 //Mobiles
 @media only screen and (max-width: 1224px)  {
   .center-navbar {
     margin-left: 1%;
     font-size: 15px !important;
+  }
+
+  .profile-container {
+    display:inline-block;
+    position: relative;
+    
+    img {
+      width: 250px;
+      height: 250px;
+      resize: 'contain';
+      border-radius: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    span {
+      margin-left: 20px;
+      display: inline-block;
+      vertical-align:bottom;
+    }
+  }
+
+  .mySwiper {
+    width: 400px;
   }
 }
 
@@ -101,3 +137,21 @@
   }
 }
 
+.font-link {
+  font-family: 'Bebas Neue', cursive;
+  padding: 0 10px;
+  white-space: normal;
+  word-break: break-word;
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 180%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.loading {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
