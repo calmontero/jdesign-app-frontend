@@ -3,6 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import ReactLoading from "react-loading";
+import "../../styles.scss";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';

@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Testimonial.css";
+import "../../styles.scss";
 import { Avatar } from "@material-ui/core";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
@@ -26,9 +27,13 @@ const Testimonial = () => {
   return (
     <div
       className="testimonial"
-      style={{ display: "flex", justifyContent: "center", marginTop: 50, height: "63vh" }}
+      style={window.innerWidth < 1224 ?
+        { position: "relative" } :
+        { display: "flex", justifyContent: "center", height: "63vh" }
+      }
     >
-      <div style={{ width: "50%", textAlign: "center" }}>
+      <div style={window.innerWidth < 1224 ? { width: "20%", textAlign: "center" } : 
+      { width: "50%", textAlign: "center" }}>
         
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
           <Card img="https://i.ibb.co/vjzz5q8/instagram-profile-calmontero.jpg" p="Un cliente satisfecho es un cliente fiuel, un cliente que se vuelve parte de la familia del negocio, un cliente valioso.  Por eso priorizamos su satisfacción y la procuramos con gran esfuerzo."

@@ -1,36 +1,31 @@
-.main-container {
-  display: flex;
-  background-color: pink;
-  position:absolute;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px;
-  margin: 0;
-  height: fit-content;
-}
-
-.craft-header {
-  background: url("https://i.ibb.co/Kb7jHFV/background-main.jpg") ;
-  background-size: cover;
-  width: 170vh;
-  margin: 0 auto;
-}
-
-.craft-box {
-  background: #fefbd8;
-  opacity: 2;
-  border-radius: 12px;
-  height: fit-content;
-}
-
 .home-container {
   height: 63vh;
 }
 
+// NavBar 
 .color-navbar {
   background-color: palevioletred;
 }
+
+.active {
+  color: #f5deb3 !important;
+}
+
+.linkText:hover {
+  background-color: #333;
+}
+
+.linkText { 
+  float: none;
+  line-height: 19px;
+  padding: 9px 10px 11px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  font-family: Rokkitt, sans-serif;
+  clear: both;
+  line-height: 1.5;
+}
+// NavBar
 
 //Desktop or Laptop
 @media only screen and (min-width: 1224px)  {
@@ -57,10 +52,10 @@
   }
 
 }
+
 //Mobiles
 @media only screen and (max-width: 1224px)  {
   .center-navbar {
-    margin-left: 1%;
     font-size: 15px !important;
   }
 
@@ -90,28 +85,7 @@
   }
 }
 
-.active {
-  color: #f5deb3 !important;
-}
-
-.linkText:hover {
-  background-color: #333;
-}
-
-.linkText { 
-  float: none;
-  line-height: 19px;
-  padding: 9px 10px 11px;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  font-family: Rokkitt, sans-serif;
-  clear: both;
-  line-height: 1.5;
-}
-
 .cards-list {
-  margin: 0px;
-  padding: 1rem 1rem;
   text-align: center;
 }
 

@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "./styles.scss";
 import CraftDownloads from "./components/CraftDownloads/CraftDownloads";
+import { Container, Row, Col } from 'react-bootstrap';
 //import { isMobile, browserName } from "react-device-detect";
 
 const useStyles = makeStyles({
@@ -32,42 +33,62 @@ theme.typography.h1 = {
 
 function App() {
   const classes = useStyles(); 
-  //alert(isMobile);
+  const mainContainer = {backgroundColor: '#ffc0cb'};
+  const craftHeader = {
+    backgroundImage: `url('https://i.ibb.co/Kb7jHFV/background-main.jpg')`, 
+    backgroundSize: "cover"
+  };
+  const craftBox = {
+    background: "#fefbd8",
+    opacity: "2",
+    borderRadius: "12px",
+    height: "fit-content"
+  };
 
   return (
-    <div className="main-container" >
-      <div className="craft-header" >
-      <ThemeProvider theme={theme}>
-        <Typography gutterBottom variant="h1" component="div" align='center' className={classes.custom} >
-            Judith's Designs
-        </Typography>
-        </ThemeProvider>
-        <span  className="font-link"  >
-          Papelería creativa para tus eventos, artículos personalizados franelas, tazas, vasos y mucho más...
-        </span>
+    
+    <Container fluid style={mainContainer} bsClass="mainContainer">
+      <Row>
+      <Col>
+        <Row className="justify-content-md-center" >
         <Navigation />
-          <div id="box" className="craft-box" >
-          <Switch>
-            <Route exact path="/" >
-              <Home />
-            </Route>
-            <Route exact path="/jobs">
-              <CraftJobs />
-            </Route>
-            <Route exact path="/testimonials">
-              <Testimonial />
-            </Route>
-            <Route exact path="/downloads">
-              <CraftDownloads />
-            </Route>
-            <Route exact path="/services/:id">
-              {/*<SlickCarousel />*/}
-              <CraftSwiper />
-            </Route>
-          </Switch>
-          </div>
-      </div>
-    </div>
+        <Col lg={9} style={craftHeader} bsClass="craftHeader" >
+          
+        <ThemeProvider theme={theme}>
+          <Typography gutterBottom variant="h1" component="div" align='center' className={classes.custom} >
+              Judith's Designs
+          </Typography>
+          </ThemeProvider>
+          <span  className="font-link"  >
+            Papelería creativa para tus eventos, artículos personalizados franelas, tazas, vasos y mucho más...
+          </span>
+            <Row>
+            <Col style={craftBox} bsClass="craftBox" >
+            <Switch>
+              <Route exact path="/" >
+                <Home />
+              </Route>
+              <Route exact path="/jobs">
+                <CraftJobs />
+              </Route>
+              <Route exact path="/testimonials">
+                <Testimonial />
+              </Route>
+              <Route exact path="/downloads">
+                <CraftDownloads />
+              </Route>
+              <Route exact path="/services/:id">
+                {/*<SlickCarousel />*/}
+                <CraftSwiper />
+              </Route>
+            </Switch>
+            </Col>
+            </Row>
+        </Col>
+        </Row>
+      </Col>
+      </Row>
+    </Container>
   );
 }
 
