@@ -1,8 +1,4 @@
-.home-container {
-  height: 63vh;
-}
-
-// NavBar 
+//// NavBar //// 
 .color-navbar {
   background-color: palevioletred;
 }
@@ -25,12 +21,28 @@
   clear: both;
   line-height: 1.5;
 }
-// NavBar
+//// NavBar ////
+
+.font-link {
+  font-family: 'Bebas Neue', cursive;
+  padding: 0 10px;
+  white-space: normal;
+  word-break: break-word;
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 //Desktop or Laptop
 @media only screen and (min-width: 1224px)  {
   .center-navbar {
     margin-left: 35%;
+  }
+
+  .font-link {
+    font-size: 180%;
   }
 
   .profile-container {
@@ -57,6 +69,10 @@
 @media only screen and (max-width: 1224px)  {
   .center-navbar {
     font-size: 15px !important;
+  }
+
+  .font-link {
+    font-size: 150%;
   }
 
   .profile-container {
@@ -109,19 +125,6 @@
   h2 {
     color: red;
   }
-}
-
-.font-link {
-  font-family: 'Bebas Neue', cursive;
-  padding: 0 10px;
-  white-space: normal;
-  word-break: break-word;
-  display: block;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-size: 180%;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .loading {

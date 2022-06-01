@@ -31,7 +31,7 @@ function CraftJobs() {
   ];
     
     return (
-    <div className="cards-list">
+      <div className="cards-list">
           { cardInfo.map(renderCard => {
               return <CraftCards renderCard={renderCard} />
               }

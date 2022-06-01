@@ -20,7 +20,7 @@ function Cards( { renderCard } ) {
       />
         <div className="cardBody">
           <h2> {title} </h2>
-          <Link to={`/services/${id}`}><button type="button" class="btn btn-outline-secondary"> View More</button></Link>
+          <Link to={`/services/${id}`}><button type="button" class="btn btn-outline-secondary"> Ver</button></Link>
         </div>
       </div>
     )

@@ -1,10 +1,14 @@
 import React from "react";
+import Header from '../Header/Header';
 import { SocialIcon } from 'react-social-icons';
+import { Row, Col } from 'react-bootstrap';
 import "../../styles.scss";
 
 function Home() {
     return (
-      <div className="home-container">
+      <Row className="justify-content-md-center" >
+        <Header />
+        <Col lg={9}  >
         <SocialIcon url="https://www.instagram.com/jdesign_art/" target="_blank" network="instagram" style={{ height: 35, width: 35 }} />
         <SocialIcon url="https://www.facebook.com" target="_blank" network="facebook" style={{ height: 35, width: 35 }} />
         <SocialIcon url="https://jdesigns-beta.netlify.app/" target="_blank" label="Share" style={{ height: 35, width: 35 }}/>
@@ -17,7 +21,8 @@ function Home() {
             alt="jdesign-img">
           </img>
         </div>
-      </div>
+        </Col>
+      </Row>
     );
 }
 
